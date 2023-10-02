@@ -2,7 +2,7 @@
 Project Pitch or Proposal (Deliverable #1)
 
 Background:  
-  Keeping track of daily tasks can be difficult for students, we intend to create a website to help students keep track of their daily activities such as homework, deadlines, grades, clubs, and ect. 
+          Keeping track of daily tasks can be difficult for students, we intend to create a website to help students keep track of their daily activities such as homework, deadlines, grades, clubs, and ect. 
 
 - A description of our intended user population 
 
