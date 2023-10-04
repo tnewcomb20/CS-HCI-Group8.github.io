@@ -11,9 +11,14 @@
  <body>
   <h1>MePlan</h1>
   <p>Welcome to MePlan, the most intuitive place to plan your work/life.</p>
-  <p id="demo">JavaScript can change HTML content.</p>
-  <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
-  <p>Type whatever you'd like. It doesn't do anything yet...</p>
+  <p id="demo">To-do</p>
+  <button type="button" onclick='document.getElementById("demo").innerHTML = "Done!"'>Finished?</button>
+  <p onclick="changeText(this)">[?] (Clickable text)</p>
   <form><input></form>
+  <script>
+   function changeText(id) {
+    id.innerHTML = "[!] My first assignment";
+   }
+  </script>
  </body>
 </html>
