@@ -15,12 +15,15 @@
   <!-- <button type="button" onclick='document.getElementById("demo").innerHTML = "Done!"'>Finished?</button> -->
   <!-- <p onclick="changeText(this)">[?] (Clickable text)</p> -->
   <form>
-   <input onkeydown="addElement()">
+   <input type="text" id="textInput">
+   <input type="button" onclick="addElement()">
   </form>
   <script>
    function addElement() {
+    let inputValue = document.getElementById('textInput').value;
     let p = document.createElement('p');
-    document.body.append(p);
+    p.textContent = inputValue
+    document.body.appendChild(p);
    }
   </script>
   <!-- <script>
