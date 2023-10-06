@@ -12,13 +12,21 @@
   <h1>MePlan</h1>
   <p>Welcome to MePlan, the most intuitive place to plan your work/life.</p>
   <p id="demo">To-do</p>
-  <button type="button" onclick='document.getElementById("demo").innerHTML = "Done!"'>Finished?</button>
-  <p onclick="changeText(this)">[?] (Clickable text)</p>
-  <form><input></form>
+  <!-- <button type="button" onclick='document.getElementById("demo").innerHTML = "Done!"'>Finished?</button> -->
+  <!-- <p onclick="changeText(this)">[?] (Clickable text)</p> -->
+  <form>
+   <input onkeydown="addElement()">
+  </form>
   <script>
+   function addElement() {
+    let p = document.createElement('p');
+    document.body.append(p);
+   }
+  </script>
+  <!-- <script>
    function changeText(id) {
     id.innerHTML = "[!] My first assignment";
    }
-  </script>
+  </script> -->
  </body>
 </html>
