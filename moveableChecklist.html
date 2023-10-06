@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HCI Project</title>
+  <style>
+    body { background: whitesmoke; }
+    h1 { background: lightgray; color: black; font-weight: bold; }
+    p { background: white; color: dimgray; }
+    .draggable {
+       position: absolute;
+       z-index: 9;
+       background-color: #f1f1f1;
+       text-align: center;
+       border: 1px solid #d3d3d3;
+    }
+    .draggableHeader {
+      padding: 10px;
+      cursor: move;
+      z-index: 10;
+      background-color: #2196F3;
+      color: #fff;
+    }
+    .input {
+      background: transparent;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+<h1>MePlan</h1>
+<p>Welcome to MePlan, the most intuitive place to plan your work/life.</p>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<p>Type whatever you'd like. It doesn't do anything yet...</p>
+<form><input class="input"></form>
+
+<h1>Draggable DIV Element</h1>
+
+<p>Click and hold the mouse button down while moving the DIV element</p>
+
+<div id="drag1", class="draggable">
+  <div class="draggableHeader">Click here to move</div>
+  <input type="button" onclick="createCheckbox(this.parentNode)" value="new box">
+  <input id="drag1input">
+</div>
+
+<div><input class="input"></div>
+
+<script>
+  //Draggable Check-List Things:
+  dragElement(document.getElementById("drag1"));
+
+  function removeThing(thing) {
+    //Remove This Thing
+    thing.parentNode.parentNode.removeChild(thing.parentNode);
+  }
+
+  function createCheckbox(location) {
+    //Create New Checkbox Input
+    const newCheck = document.createElement("input");
+    newCheck.type = "checkbox";
+    //Make it Delete Itself When Checked
+    newCheck.setAttribute("onclick", "this.parentNode.parentNode.removeChild(this.parentNode)");
+
+    //Make New Text to Put Checkbox In
+    const newText = document.createElement("p");
+    newText.appendChild(newCheck)
+
+    //Give the Text Box it's Text From the Input
+    let text = document.getElementById(location.id + "input").value
+    newText.append(text);
+
+    //Add New Item to List
+    location.appendChild(newText);
+  }
+
+  function dragElement(elmnt) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      //Move Element From Header if Present
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      //Otherwise, Move From Anywhere
+      elmnt.onmousedown = dragMouseDown;
+    }
+    function dragMouseDown(e) {
+      //Get Initial Cursor Position:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      //Move Element When Mouse Moves
+      document.onmousemove = elementDrag;
+    }
+    function elementDrag(e) {
+      //Find New Cursor Position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      //Move Element to New Location
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+    function closeDragElement() {
+      //Stop Moving Once Mouse is Released
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+</script>
+</body>
+</html>
