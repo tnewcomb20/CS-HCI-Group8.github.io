@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
  <head>
   <title>HCI Project</title>
   <style>
@@ -8,7 +9,9 @@
    p { background: white; color: dimgray; }
   </style>
  </head>
+ 
  <body>
+  
   <h1>MePlan</h1>
   <p>Welcome to MePlan, the most intuitive place to plan your work/life.</p>
   <button onclick="window.location.href='https://cs-hci-group8.github.io/moveableChecklist.html'">Moveable Checklist Test</button>
@@ -19,6 +22,7 @@
    <input type="text" id="textInput">
    <input type="button" onclick="addElement()">
   </form>
+  
   <script>
    function addElement() {
     let inputValue = document.getElementById('textInput').value;
@@ -32,5 +36,18 @@
     id.innerHTML = "[!] My first assignment";
    }
   </script> -->
+  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js'
+   
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js'
+   
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js'
+  </script>
+  
  </body>
+ 
 </html>
