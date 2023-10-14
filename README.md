@@ -19,3 +19,10 @@ Background:
 - a summary of the software, hardware, and other skills that we expect to need in team members to accomplish the project
 
   Ability to create a usable website and connect it to a database to store and use information about different assignments / projects and display it in a visually useful manner for users to interact with.
+
+
+
+![Mockup_Design1](https://github.com/CS-HCI-Group8/CS-HCI-Group8.github.io/assets/97752648/c6fb8858-50a8-4234-9834-f7bdc9cad5e3)
+
+
+
