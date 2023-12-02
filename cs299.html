@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEPLAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        body {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            line-height: 150%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #515d7cee;
+        }
+
+        .header h1 {
+            color: #faf9f9;
+            font-size: 40px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .header .social a {
+            padding: 0 5px;
+            color: #222222;
+        }
+
+        .left {
+            float: left;
+            width: 180px;
+            margin: 0;
+            padding: 1em;
+        }
+
+        .content {
+            margin-left: 190px;
+            border-left: 1px solid #d4d4d4;
+            padding: 1em;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #9b95d3;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #29292a;
+            color: white;
+        }
+
+        .footer {
+            padding: 55px 20px;
+            background-color: #bfc5da;
+            color: white;
+            text-align: center;
+        }
+
+        .draggable-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>MEPLAN</h1>
+        </header>
+        <aside class="left">
+            <img src="" width="160px" />
+            <ul>
+                <li><a class="active" href="#Navigation">Navigation</a></li>
+                <li><a href="#reminder-section">Google Calendar</a></li>
+                <li><a href="#homework-tracker">Homework</a></li>
+            </ul>
+            <br><br>
+        </aside>
+        <div class="content">
+            <!-- Reminder Section -->
+            <div class="draggable-box" id="reminder-section">
+                <h2>Google Calendar</h2>
+                <!-- Embed Google Calendar iframe here -->
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&src=d25ld2NvbWJAd2lsbGFtZXR0ZS5lZHU&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043"
+                    style="border: solid 1px #777; width: 100%; height: 600px;" frameborder="0" scrolling="no"></iframe>
+            </div>
+
+            <!-- Homework Tracker Section -->
+            <div class="draggable-box" id="homework-tracker">
+                <h2>Homework Tracker</h2>
+                <label for="homework-input">Homework:</label>
+                <input type="text" id="homework-input" placeholder="Enter your homework">
+                <label for="date-input">Date:</label>
+                <input type="date" id="date-input">
+                <label for="priority-input">Priority:</label>
+                <select id="priority-input">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button onclick="addHomework()">Add Homework</button>
+                <ul id="homework-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Your JavaScript for the Homework Tracker here
+        function addHomework() {
+            // Add your code for adding homework tasks
+        }
+    </script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Digital Clock</title>
+</head>
+
+<body>
+    <!-- Your existing HTML content goes here -->
+
+    <!-- Embedded Digital Clock -->
+    <iframe
+        src="https://widgetbox.app/embed/clock/digital/gvXUXBM3WG88jZg5FVjJzR?flag=true"
+        style="width: 300px; height: 150px; border: none;"
+        allowtransparency="true"
+        frameborder="0"
+        scrolling="no">
+    </iframe>
+
+    <!-- Your existing HTML content goes here -->
+</body>
+
+</html>
+
+</html>
+
